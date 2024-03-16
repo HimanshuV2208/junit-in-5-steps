@@ -12,8 +12,16 @@ class MyMathTest {
         int[] numbers = {1,2,3};
         MyMath math = new MyMath();
         int result = math.calculateSum(numbers);
-        System.out.println(result);
         int expectedResult = 6;
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    void test2() {
+        int[] numbers = {};
+        MyMath math = new MyMath();
+        int result = math.calculateSum(numbers);
+        int expectedResult = 0;
         assertEquals(expectedResult, result);
     }
 
