@@ -6,21 +6,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyMathTest {
 
+    private MyMath math = new MyMath();
+
     @Test
-    void test() {
-        //fail("Not yet implemented");
-        int[] numbers = {1,2,3};
-        MyMath math = new MyMath();
-        int result = math.calculateSum(numbers);
+    void calculateSum_ThreeElementArray() {
+        int result = math.calculateSum(new int[]{1,2,3});
         int expectedResult = 6;
         assertEquals(expectedResult, result);
     }
 
     @Test
-    void test2() {
-        int[] numbers = {};
-        MyMath math = new MyMath();
-        int result = math.calculateSum(numbers);
+    void calculateSum_ZeroElementArray() {
+        int result = math.calculateSum(new int[]{});
         int expectedResult = 0;
         assertEquals(expectedResult, result);
     }
